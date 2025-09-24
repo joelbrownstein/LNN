@@ -11,15 +11,12 @@ from functools import partial # reduces arguments to function by making some sub
 from jax.experimental import stax
 from jax.experimental import optimizers
 
-import os, sys, time
-THIS_DIR = os.path.dirname(os.path.abspath(__file__))
-PARENT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-sys.path.append(PARENT_DIR)
+import time
 
-from lnn import lagrangian_eom, unconstrained_eom
+from lnn.core import lagrangian_eom, unconstrained_eom
+from lnn.models import mlp
+from lnn.utils import wrap_coords
 from .data import get_dataset
-from models import mlp
-from utils import wrap_coords
 
 def get_args():
     return {'input_dim': 4,

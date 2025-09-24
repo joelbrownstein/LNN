@@ -8,17 +8,13 @@ from jax.experimental.ode import odeint
 from functools import partial # reduces arguments to function by making some subset implicit
 from jax.experimental import stax
 from jax.experimental import optimizers
-import os, sys, time
-sys.path.append('..')
-sys.path.append('../experiment_dblpend/')
-from lnn import lagrangian_eom_rk4, lagrangian_eom, unconstrained_eom
-from data import get_dataset
-from models import mlp as make_mlp
-from utils import wrap_coords
+import time
+from lnn.core import lagrangian_eom_rk4, lagrangian_eom, unconstrained_eom
+from lnn.models import mlp as make_mlp
+from lnn.utils import wrap_coords
 
-from data import get_trajectory
-from data import get_trajectory_analytic
-from physics import analytical_fn
+from ..double_pendulum.data import get_dataset, get_trajectory, get_trajectory_analytic
+from ..double_pendulum.physics import analytical_fn
 
 from jax.experimental.ode import odeint
 

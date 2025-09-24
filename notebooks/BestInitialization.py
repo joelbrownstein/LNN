@@ -9,28 +9,16 @@ from functools import partial # reduces arguments to function by making some sub
 from jax.experimental import stax
 from jax.experimental import optimizers
 
-import os, sys, time
-sys.path.append('..')
-
+import time
 
 # ## Set up LNN:
 
+from lnn.core import raw_lagrangian_eom
+from lnn.models import mlp as make_mlp
+from lnn.utils import wrap_coords
 
-sys.path.append('../experiment_dblpend/')
-
-from lnn import raw_lagrangian_eom
-from data import get_dataset
-from models import mlp as make_mlp
-from utils import wrap_coords
-
-
-sys.path.append('../hyperopt')
-
-
-from HyperparameterSearch import learned_dynamics
-
-
-from HyperparameterSearch import extended_mlp
+from examples.double_pendulum.data import get_dataset
+from examples.hyperopt.HyperparameterSearch import learned_dynamics, extended_mlp
 
 
 class ObjectView(object):

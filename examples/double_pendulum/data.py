@@ -8,16 +8,9 @@ import numpy as np # get rid of this eventually
 from jax.experimental.ode import odeint
 from functools import partial # reduces arguments to function by making some subset implicit
 
-import os, sys
-THIS_DIR = os.path.dirname(os.path.abspath(__file__))
-PARENT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-sys.path.append(PARENT_DIR)
-
-from lnn import solve_dynamics
-from utils import wrap_coords
-#HACK
-#from .physics import lagrangian_fn, analytical_fn
-from physics import lagrangian_fn, analytical_fn
+from lnn.core import solve_dynamics
+from lnn.utils import wrap_coords
+from .physics import lagrangian_fn, analytical_fn
 
 
 @partial(jax.jit, backend='cpu')
