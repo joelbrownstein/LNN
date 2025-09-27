@@ -61,6 +61,8 @@ proglog = "<=0.1.9"
 pytest = "*"
 nbval = "*"
 ipykernel = "*"
+webcolors = "==1.13"
+jupyter = ">=1.1.1,<2"
 
 [tool.pixi.pypi-dependencies]
 lagrangian_nns = { path = ".", editable = true }
