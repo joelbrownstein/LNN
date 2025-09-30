@@ -13,8 +13,8 @@ from lnn.core import lagrangian_eom_rk4, lagrangian_eom, unconstrained_eom
 from lnn.models import mlp as make_mlp
 from lnn.utils import wrap_coords
 
-from ..double_pendulum.data import get_dataset, get_trajectory, get_trajectory_analytic
-from ..double_pendulum.physics import analytical_fn
+from double_pendulum.data import get_dataset, get_trajectory, get_trajectory_analytic
+from double_pendulum.physics import analytical_fn
 
 from jax.experimental.ode import odeint
 
