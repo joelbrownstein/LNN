@@ -517,27 +517,3 @@ plt.title("Lagrangian NN - Special Relativity")
 plt.tight_layout()
 plt.savefig('sr_lnn.png', dpi=150)
 
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
