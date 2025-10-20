@@ -1,0 +1,6 @@
+open http://localhost:8888/tree/notebooks
+open http://localhost:8888/notebooks/notebooks/DoublePendulum.ipynb
+open http://localhost:8888/notebooks/notebooks/SpecialRelativity.ipynb
+open http://localhost:8888/notebooks/notebooks/WaveEquation.ipynb
+open http://localhost:8888/notebooks/notebooks/LNN_Tutorial.ipynb
+open https://web.physics.utah.edu/~joelbrownstein/resources/pdf/Lagrangian-Neural-Networks-Tutorial.pdf
