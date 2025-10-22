@@ -423,8 +423,8 @@ import pickle as pkl
 # In[ ]:
 
 
-# pkl.dump({'params': best_params, 'description': 'q and g are divided by 10. hidden=500. act=Softplus'},
-#          open('best_sr_params_v2.pkl', 'wb'))
+ pkl.dump({'params': best_params, 'description': 'q and g are divided by 10. hidden=500. act=Softplus'},
+          open('best_sr_params_v2.pkl', 'wb'))
 
 
 # In[ ]:
